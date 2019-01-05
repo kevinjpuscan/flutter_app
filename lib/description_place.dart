@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'review.dart';
 
 class DescriptionPlace extends StatelessWidget{
   @override
@@ -64,7 +65,8 @@ class DescriptionPlace extends StatelessWidget{
     return Column(
       children: <Widget>[
         title_start,
-        description_text
+        //description_text,
+        Review(),
       ],
     );
   }

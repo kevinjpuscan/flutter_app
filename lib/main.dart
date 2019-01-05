@@ -23,13 +23,19 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Mi primera App"),
-        ),
+          title:
+          Center(
+            child: Text("Hola Mundo"),
+          ),
+          ),
         body: DescriptionPlace(),
       ),
     );
   }
 }
+
+
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
