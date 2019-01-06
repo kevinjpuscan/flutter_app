@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'description_place.dart';
 import 'review.dart';
 import 'gradient_back.dart';
+import 'button_purple.dart';
 
 void main() => runApp(MyApp());
 
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
             ListView(
           children: <Widget>[
             DescriptionPlace(),
+            ButtonPurple(),
             Review(),
             Review(),
             Review(),
