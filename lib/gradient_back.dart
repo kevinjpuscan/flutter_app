@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'card_image.dart';
 
 class GradientBack extends StatelessWidget{
   @override
@@ -6,7 +7,7 @@ class GradientBack extends StatelessWidget{
     // TODO: implement build
 
     String title="Popular";
-    return Container(
+    final gradient= Container(
       height:250.0,
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -32,6 +33,28 @@ class GradientBack extends StatelessWidget{
       alignment: Alignment(-0.9, -0.6),
     
     );
+
+    return Stack(
+      children: <Widget>[
+        gradient,
+        Container(
+          height: 330.0,
+          child: 
+          ListView(
+            padding: EdgeInsets.all(25.0),
+          scrollDirection: Axis.horizontal,
+          children: <Widget>[
+            CardImage(),
+            CardImage(),
+            CardImage(),
+            CardImage(),
+          ],
+        ),
+        )
+        
+      ],
+    );
   }
+
 
 }
