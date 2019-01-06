@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'review.dart';
+import 'gradient_back.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,19 +24,26 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title:
-          Center(
-            child: Text("Hola Mundo"),
-          ),
-          ),
-        body: DescriptionPlace(),
+        
+        body: Stack(
+          children: <Widget>[
+            ListView(
+          children: <Widget>[
+            DescriptionPlace(),
+            Review(),
+            Review(),
+            Review(),
+            Review(),
+            Review(),
+          ],
+        ),
+        GradientBack(),
+          ],
+        ),
       ),
     );
   }
 }
-
-
 
 
 class MyHomePage extends StatefulWidget {
@@ -108,7 +117,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme
+                .of(context)
+                .textTheme
+                .display1,
             ),
           ],
         ),
